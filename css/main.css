@@ -10,10 +10,8 @@
 */
 body {
   background: #556270;
+  color: #fff;
   font-family: Georgia, serif; }
-
-h1 {
-  color: #fff; }
 
 /*
   ===========================
@@ -31,7 +29,6 @@ main {
   max-width: 360px; }
   main h2 {
     margin-top: 100px;
-    color: #fff;
     font-size: 5em; }
 
 .controls * {
@@ -42,11 +39,9 @@ main {
   margin: 0 auto;
   margin-top: 30px;
   width: 240px; }
-  .controls p {
-    color: #fff; }
-  .controls button {
-    color: #fff;
-    background: #556270;
-    border: none; }
+
+button {
+  background: #556270;
+  border: none; }
 
 /*# sourceMappingURL=main.css.map */

@@ -19,13 +19,9 @@ $primary-color: #556270;
 
 body {
   background: $primary-color;
+  color: #fff;
   font-family: Georgia, serif;
 }
-h1 {
-  color: #fff;
-}
-
-
 
 /*
   ===========================
@@ -41,7 +37,6 @@ main {
 
   h2 {
     margin-top: 100px;
-    color: #fff;
     font-size: 5em;
   }
 }
@@ -55,13 +50,9 @@ main {
   margin: 0 auto;
   margin-top: 30px;
   width: 240px;
+}
 
-  p {
-    color: #fff;
-  }
-  button {
-    color: #fff;
-    background: $primary-color;
-    border: none;
-  }
+button {
+  background: $primary-color;
+  border: none;
 }
