@@ -55,10 +55,9 @@ main {
 button {
   background: $primary-color;
   border: none;
-}
-
-button:hover {
-  color: #4ECDC4;
+  &:hover {
+    color: #4ECDC4;
+  }
 }
 
 menu {

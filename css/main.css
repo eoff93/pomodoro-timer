@@ -43,9 +43,8 @@ main {
 button {
   background: #556270;
   border: none; }
-
-button:hover {
-  color: #4ECDC4; }
+  button:hover {
+    color: #4ECDC4; }
 
 menu button {
   font-size: 28px;
