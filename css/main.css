@@ -44,4 +44,11 @@ button {
   background: #556270;
   border: none; }
 
+button:hover {
+  color: #4ECDC4; }
+
+menu button {
+  font-size: 28px;
+  padding: 10px 20px; }
+
 /*# sourceMappingURL=main.css.map */
