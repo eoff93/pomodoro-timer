@@ -4,7 +4,7 @@
   ===========================
 */
 $primary-color: #556270;
-
+$hover-color: #4ECDC4;
 /*
   ===========================
   MIXINS
@@ -56,7 +56,7 @@ button {
   background: $primary-color;
   border: none;
   &:hover {
-    color: #4ECDC4;
+    color: $hover-color;
   }
 }
 
