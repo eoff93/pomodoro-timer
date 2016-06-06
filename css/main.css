@@ -1,4 +1,51 @@
+/*
+  ===========================
+  VARIABLES
+  ===========================
+*/
+/*
+  ===========================
+  MIXINS
+  ===========================
+*/
+body {
+  background: #556270;
+  font-family: Georgia, serif; }
+
+h1 {
+  color: #fff; }
+
+/*
+  ===========================
+  MAIN APP STYLING
+  ===========================
+*/
+main {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px solid #C7F464;
+  height: 360px;
+  max-width: 360px; }
+  main h2 {
+    margin-top: 100px;
+    color: #fff;
+    font-size: 5em; }
+
 .controls * {
   display: inline-block; }
+
+.controls {
+  font-size: 32px;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 240px; }
+  .controls p {
+    color: #fff; }
+  .controls button {
+    color: #fff;
+    background: #556270;
+    border: none; }
 
 /*# sourceMappingURL=main.css.map */

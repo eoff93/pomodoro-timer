@@ -1,3 +1,66 @@
+/*
+  ===========================
+  VARIABLES
+  ===========================
+*/
+$primary-color: #556270;
+
+/*
+  ===========================
+  MIXINS
+  ===========================
+*/
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+body {
+  background: $primary-color;
+  font-family: Georgia, serif;
+}
+h1 {
+  color: #fff;
+}
+
+
+
+/*
+  ===========================
+  MAIN APP STYLING
+  ===========================
+*/
+main {
+  @include border-radius(50%);
+  border: 1px solid #C7F464;
+  height: 360px;
+  max-width: 360px;
+
+  h2 {
+    margin-top: 100px;
+    color: #fff;
+    font-size: 5em;
+  }
+}
+
 .controls * {
   display: inline-block;
+}
+
+.controls {
+  font-size: 32px;
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 240px;
+
+  p {
+    color: #fff;
+  }
+  button {
+    color: #fff;
+    background: $primary-color;
+    border: none;
+  }
 }
