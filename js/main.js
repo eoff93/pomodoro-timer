@@ -11,3 +11,13 @@ let totalBreakSeconds = breakTime * 60;
 $('#study-length').html(time);
 $('#break-length').html(breakTime);
 $('#timer').html(time + ':00');
+
+$('#break-increase').click(breakInc);
+
+function breakInc() {
+  if (breakTime < 15) {
+    breakTime++;
+    totalBreakSeconds += 60;
+    $('#break-length').html(breakTime);
+  }
+}
