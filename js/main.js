@@ -74,7 +74,7 @@ function startTimer() {
     }
 
     $('#timer').html(minutes + ':' + seconds);
-    countdown -= 1;
+    totalSeconds -= 1;
     timer = setTimeout(startTimer, 1000);
   }
 
