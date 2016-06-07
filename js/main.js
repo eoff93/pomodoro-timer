@@ -106,3 +106,26 @@ function startBreak() {
     breakTimer = setTimeout(startBreak, 1000);
   }
 }
+
+// time pausing function
+function pauseTime() {
+  clearTimeout(timer);
+  clearTimeout(timerBreak);
+  clearTimeout(breakTimer);
+}
+
+// reset time function
+function resetTime() {
+  pauseTime();
+  setBreak = false;
+  breakTime = 5;
+  time = 25;
+  countdown = time;
+
+  totalBreakSeconds = breakTime * 60;
+  totalSeconds = countdown * 60;
+
+  $('#break-length').html(breakTime);
+  $('#study-length').html(time);
+  $('#timer').html(countdown + ':00');
+}
