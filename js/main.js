@@ -20,6 +20,9 @@ $('#break-decrease').click(breakDec);
 $('#study-increase').click(studyInc);
 $('#study-decrease').click(studyDec);
 
+// controls to start, pause and reset
+$('#start-pause').click(startTimer);
+
 // increases break time and totalBreakSeconds
 function breakInc() {
   if (breakTime < 15) {
@@ -41,6 +44,7 @@ function breakDec() {
 function studyInc() {
   if (time < 50) {
     time++;
+    countdown = time;
     totalSeconds += 60;
     $('#study-length').html(time);
   }
@@ -52,5 +56,53 @@ function studyDec() {
     time--;
     totalSeconds -= 60;
     $('#study-length').html(time);
+  }
+}
+
+// timer variables
+let timer;
+let timerBreak;
+let setBreak = false;
+
+function startTimer() {
+  let minutes = parseInt(totalSeconds / 60, 10);
+  let seconds = parseInt(totalSeconds % 60, 10);
+
+  if (totalSeconds > 0) {
+    if (seconds < 10) {
+      seconds = '0' + seconds;
+    }
+
+    $('#timer').html(minutes + ':' + seconds);
+    countdown -= 1;
+    timer = setTimeout(startTimer, 1000);
+  }
+
+  if (totalSeconds === 0) {
+    if (setBreak === false) {
+      $('#timer').html('Time for a break!');
+    }
+    clearTimeout(timer);
+    timerBreak = setTimeout(startBreak, 1000);
+  }
+}
+
+// break time function
+let breakTimer;
+
+function startBreak() {
+  setBreak = true;
+
+  breakMinutes = parseInt(totalBreakSeconds / 60, 10);
+  breakSeconds = parseInt(totalBreakSeconds % 60, 10);
+
+  if (totalBreakSeconds > 0) {
+    if (breakSeconds < 10) {
+      breakSeconds = '0' + breakSeconds;
+    }
+
+    $('#timer').html(breakMinutes + ':' + breakSeconds);
+    totalBreakSeconds -= 1;
+    breakTimer = setTimeout(startBreak, 1000);
   }
 }
