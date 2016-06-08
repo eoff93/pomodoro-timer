@@ -10,7 +10,7 @@ let totalBreakSeconds = breakTime * 60;
 // set initial
 $('#study-length').html(time);
 $('#break-length').html(breakTime);
-$('#timer').html(time + ':00');
+$('#timer').html(`${time}:00`);
 
 // controls to change break time
 $('#break-increase').click(breakInc);
@@ -67,15 +67,15 @@ let timerBreak;
 let setBreak = false;
 
 function startTimer() {
-  let minutes = parseInt(totalSeconds / 60, 10);
+  const minutes = parseInt(totalSeconds / 60, 10);
   let seconds = parseInt(totalSeconds % 60, 10);
 
   if (totalSeconds > 0) {
     if (seconds < 10) {
-      seconds = '0' + seconds;
+      seconds = `0${seconds}`;
     }
 
-    $('#timer').html(minutes + ':' + seconds);
+    $('#timer').html(`${minutes}:${seconds}`);
     totalSeconds -= 1;
     timer = setTimeout(startTimer, 1000);
   }
@@ -103,7 +103,7 @@ function startBreak() {
       breakSeconds = '0' + breakSeconds;
     }
 
-    $('#timer').html(breakMinutes + ':' + breakSeconds);
+    $('#timer').html(`${breakMinutes}:${breakSeconds}`);
     totalBreakSeconds -= 1;
     breakTimer = setTimeout(startBreak, 1000);
   }
@@ -129,5 +129,5 @@ function resetTimer() {
 
   $('#break-length').html(breakTime);
   $('#study-length').html(time);
-  $('#timer').html(countdown + ':00');
+  $('#timer').html(`${countdown}:00`);
 }
