@@ -82,7 +82,7 @@ function startTimer() {
 
   if (totalSeconds === 0) {
     if (setBreak === false) {
-      $('#timer').html('Time for a break!');
+      $('#timer').html('<h3>Time for a break!</h3>');
     }
     clearTimeout(timer);
     timerBreak = setTimeout(startBreak, 1000);
