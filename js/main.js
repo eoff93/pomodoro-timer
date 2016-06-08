@@ -21,7 +21,8 @@ $('#study-increase').click(studyInc);
 $('#study-decrease').click(studyDec);
 
 // controls to start, pause and reset
-$('#start-pause').click(startTimer);
+$('#start').click(startTimer);
+$('#pause').click(pauseTimer);
 
 // increases break time and totalBreakSeconds
 function breakInc() {
