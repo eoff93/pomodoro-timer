@@ -23,6 +23,7 @@ $('#study-decrease').click(studyDec);
 // controls to start, pause and reset
 $('#start').click(startTimer);
 $('#pause').click(pauseTimer);
+$('#reset').click(resetTimer);
 
 // increases break time and totalBreakSeconds
 function breakInc() {
@@ -94,8 +95,8 @@ let breakTimer;
 function startBreak() {
   setBreak = true;
 
-  breakMinutes = parseInt(totalBreakSeconds / 60, 10);
-  breakSeconds = parseInt(totalBreakSeconds % 60, 10);
+  let breakMinutes = parseInt(totalBreakSeconds / 60, 10);
+  let breakSeconds = parseInt(totalBreakSeconds % 60, 10);
 
   if (totalBreakSeconds > 0) {
     if (breakSeconds < 10) {
@@ -109,15 +110,15 @@ function startBreak() {
 }
 
 // time pausing function
-function pauseTime() {
+function pauseTimer() {
   clearTimeout(timer);
   clearTimeout(timerBreak);
   clearTimeout(breakTimer);
 }
 
 // reset time function
-function resetTime() {
-  pauseTime();
+function resetTimer() {
+  pauseTimer();
   setBreak = false;
   breakTime = 5;
   time = 25;
