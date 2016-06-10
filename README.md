@@ -4,7 +4,7 @@
 
 A simple app that implements the famous pomodoro learning technique.
 
-Made with Babel and SCSS.
+Made with Babel, jQuery and SCSS.
 
 ## Motivation
 
