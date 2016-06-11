@@ -104,12 +104,12 @@ let breakTimer;
 function startBreak() {
   setBreak = true;
 
-  let breakMinutes = parseInt(totalBreakSeconds / 60, 10);
+  const breakMinutes = parseInt(totalBreakSeconds / 60, 10);
   let breakSeconds = parseInt(totalBreakSeconds % 60, 10);
 
   if (totalBreakSeconds > 0) {
     if (breakSeconds < 10) {
-      breakSeconds = '0' + breakSeconds;
+      breakSeconds = `0${breakSeconds}`;
     }
 
     $('#timer').html(`${breakMinutes}:${breakSeconds}`);
